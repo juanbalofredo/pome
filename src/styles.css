@@ -1,0 +1,81 @@
+/* Estilos generales */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Desactiva el scroll horizontal en el cuerpo */
+  overflow-y: scroll; /* Permite el scroll vertical */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  width: 400%; /* 4 secciones horizontales (100% por cada sección) */
+  height: 100vh;
+  flex-wrap: nowrap; /* Las secciones no se deben envolver */
+}
+
+/* Panel que ocupa toda la pantalla */
+.panel {
+  width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+/* Estilos para cada sección */
+.section-1 {
+  background-color: #f9c74f;
+}
+
+.section-2 {
+  background-color: #90be6d;
+}
+
+.section-3 {
+  background-color: #f94144;
+}
+
+.section-4 {
+  background-color: #277da1;
+}
+
+.section-5 {
+  background-color: #f3722c;
+}
+
+/* Para las flechas de desplazamiento (si se desea agregar) */
+.scroll-down {
+  position: absolute;
+  bottom: 50px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+}
+
+.arrow::after {
+  content: "↓";
+  font-size: 2rem;
+  position: absolute;
+  top: -25px;
+}
